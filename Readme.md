@@ -25,12 +25,14 @@ Assuming now is March 6th 2018 12:00:00 (GMT), unix time 1520337600.
 
 Measurements from Device1 are coming late, due to connection issues (captured one day ago, March 5th 2018 12:00:00 GMT):
 ```json
-[{ "deviceid": "device1", "temperature": 20.3, "measurementTimestamp": "1520251200" }, { "deviceid": "device1", "temperature": 20.4, "measurementTimestamp": "1520251201" }]
+[{ "deviceid": "device1", "temperature": 20.3, "measurementTimestamp": "1520251200" },
+ { "deviceid": "device1", "temperature": 20.4, "measurementTimestamp": "1520251201" }]
 ```
 
 Device2 is sending real-time measurements (captured at March 6th 2018 11:59:50 GMT)
 ```json
-[{ "deviceid": "device2", "temperature": 20.3, "measurementTimestamp": "1520337590" }, { "deviceid": "device2", "temperature": 20.4, "measurementTimestamp": "1520337591" }]
+[{ "deviceid": "device2", "temperature": 20.3, "measurementTimestamp": "1520337590" },
+ { "deviceid": "device2", "temperature": 20.4, "measurementTimestamp": "1520337591" }]
 ```
 
 To create an aggregate using tumbling window in Stream Analytics we started with the following query:
